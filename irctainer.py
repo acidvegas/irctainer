@@ -16,13 +16,13 @@ except ImportError:
 SERVER    = 'irc.supernets.org'
 PORT      = 6697
 SSL       = True
-NICK      = 'looking_glass'
-CHANNEL   = '#war'
+NICK      = 'IRCtainer'
+CHANNEL   = '#dev'
 PREFIX    = '@'
-ADMIN     = 'acidvegas!~stillfree@most.dangerous.motherfuck'
+ADMIN     = 'nick!~user@host' # change this to your host
 
-IMAGE     = 'ircdocker'
-CONTAINER = 'ircdocker'
+IMAGE     = 'irctainer'
+CONTAINER = 'irctainer'
 
 max_lines    = 1000
 max_timeout  = 120
