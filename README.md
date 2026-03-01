@@ -5,6 +5,8 @@ Designed to sit on a remote box and give your channel a shared shell for recon, 
 
 ANSI colors from command output are translated to IRC colors on the fly. The container image comes with [grc](https://github.com/garabik/grc) and color-forced aliases pre-configured, so tools like `ls`, `ping`, `nmap`, `traceroute`, etc. display in full color on IRC out of the box.
 
+![](./.screens/preview.png)
+
 ## Requirements
 - [Docker](https://docs.docker.com/engine/install/)
 - [Python 3](https://python.org/)
