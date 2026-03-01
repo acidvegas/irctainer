@@ -16,11 +16,11 @@ except ImportError:
 SERVER    = 'irc.supernets.org'
 PORT      = 6697
 SSL       = True
-NICK      = 'IRCtainer'
+NICK      = 'irctainer'
 CHANNEL   = '#dev'
 PREFIX    = '@'
-ADMIN     = 'nick!~user@host' # change this to your host
-
+ADMIN     = 'nick!user@host'
+NICKSERV  = None
 IMAGE     = 'irctainer'
 CONTAINER = 'irctainer'
 
@@ -425,6 +425,8 @@ async def bot():
 
 		if len(parts) >= 2 and parts[1] == '001' and not joined:
 			await send(writer, f'MODE {NICK} +BdDg')
+			if NICKSERV:
+				await send(writer, f'NICKSERV IDENTIFY {NICK} {NICKSERV}')
 			logging.info(f'registered, joining {CHANNEL} in 10s')
 			await asyncio.sleep(10)
 			await send(writer, f'JOIN {CHANNEL}')
